@@ -1,37 +1,8 @@
-// 'use strict';
-
-// const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
-
-// function buildStyles() {
-//   return gulp.src('./sass/**/*.scss')
-//     .pipe(sass().on('error', sass.logError))
-//     .pipe(gulp.dest('./css'));
-// };
-
-// exports.buildStyles = buildStyles;
-// exports.watch = function () {
-//   gulp.watch('./sass/**/*.scss', ['sass']);
-// };
-
-//correto
-/*const gulp = require('gulp');
-
-const sass = require('gulp-sass')(require('sass'));
-
-gulp.task('sass', async function () {
-  gulp.src('./sass/index.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./public/css'));
-});
-gulp.task('sass:watch', function () {
-  gulp.watch('./scss/index.scss', ['sass']);
-});*/
 
 const { watch, series } = require('gulp');
 const { src, dest } = require('gulp');
 
-console.log('#####',src,dest)
 
 // The `clean` function is not exported so it can be considered a private task.
 // It can still be used within the `series()` composition.
